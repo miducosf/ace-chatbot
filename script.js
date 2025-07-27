@@ -65,6 +65,9 @@ chatForm.addEventListener("submit", async (e) => {
       }),
     });
 
+    const raw = await response.text();
+    console.log("RAW:", raw);
+    const data = JSON.parse(raw);
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || "Something went wrong.";
     
