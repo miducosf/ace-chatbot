@@ -37,7 +37,7 @@ const chatBox = document.querySelector(".chatbox");
 const chatForm = document.querySelector("#chat-form");
 const userInput = document.querySelector("#chat-input");
 
-const OPENAI_API_KEY = "YOUR_API_KEY_HERE"; // Replace securely if going live
+const OPENAI_API_KEY = "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"; // Replace securely if going live
 
 // Conversation memory
 let conversationHistory = [
