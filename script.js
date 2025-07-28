@@ -45,6 +45,9 @@ chatForm.addEventListener("submit", async (e) => {
   const message = userInput.value.trim();
   if (!message) return;
 
+    // ✅ Add this line here:
+  console.log("Submitted message:", message);
+
   // Show user message
   addMessage("user", message);
   userInput.value = "";
