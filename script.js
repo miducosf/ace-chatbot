@@ -3,7 +3,7 @@ const userInput = document.getElementById("user-input");
 const chatBox = document.getElementById("chatbox");
 
 // Replace with your actual OpenAI API key
-const API_KEY = "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";
+const API_KEY = "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";
 
 chatForm.addEventListener("submit", async (e) => {
   e.preventDefault();
