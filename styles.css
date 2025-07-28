@@ -116,9 +116,42 @@ body {
 .inline-mascot {
   width: 40px;
   height: 40px;
-  vertical-align: middle;
-  margin-right: 0.5rem;
   border-radius: 50%;
+  vertical-align: top;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.speech-bubble {
+  display: flex;
+  align-items: flex-start;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.bubble-content {
+  background-color: #f0fdf4;
+  color: #065f46;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  border-top-left-radius: 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 75%;
+  position: relative;
+}
+
+.bubble-content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #f0fdf4;
+  border-bottom: 10px solid transparent;
 }
 
 .welcome-message {
