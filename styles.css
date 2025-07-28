@@ -177,7 +177,8 @@ body {
 }
 
 .welcome-img {
-  width: 180px;
+  width: 100px;
+  max-width: 90%;
   height: auto;
   margin-bottom: 1rem;
 }
