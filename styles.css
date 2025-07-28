@@ -113,6 +113,14 @@ body {
   background: #0284c7;
 }
 
+.inline-mascot {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
 .welcome-message {
   display: flex;
   flex-direction: column;
