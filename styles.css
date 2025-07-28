@@ -114,11 +114,10 @@ body {
 }
 
 .inline-mascot {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  vertical-align: top;
-  margin-right: 0.75rem;
+  margin-right: 1rem;
   flex-shrink: 0;
 }
 
@@ -128,6 +127,13 @@ body {
   background: transparent;
   border: none;
   box-shadow: none;
+}
+
+.message.bot.speech-bubble {
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .bubble-content {
@@ -140,6 +146,11 @@ body {
   line-height: 1.4;
   max-width: 75%;
   position: relative;
+}
+
+.bubble-content p {
+  font-size: 1.05rem;
+  margin: 0;
 }
 
 .bubble-content::before {
@@ -175,4 +186,9 @@ body {
   margin: 0;
   font-size: 1rem;
   line-height: 1.4;
+}
+
+.welcome-bubble {
+  margin-top: 1rem;
+  align-self: center;
 }
