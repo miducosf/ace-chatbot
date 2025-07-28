@@ -1,3 +1,4 @@
+/* === Base Layout === */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,6 +10,7 @@ body {
   height: 100vh;
 }
 
+/* === Card Container === */
 .chat-card {
   background: white;
   border-radius: 1rem;
@@ -21,6 +23,7 @@ body {
   border: 1px solid #e0e0e0;
 }
 
+/* === Header Section === */
 .chat-header {
   background-color: #3ca6c5;
   color: white;
@@ -52,6 +55,7 @@ body {
   font-size: 0.85rem;
 }
 
+/* === Chatbox Section === */
 .chatbox {
   height: 360px;
   overflow-y: auto;
@@ -82,6 +86,7 @@ body {
   color: #065f46;
 }
 
+/* === Chat Form === */
 .chat-form {
   display: flex;
   border-top: 1px solid #e2e8f0;
@@ -113,14 +118,7 @@ body {
   background: #0284c7;
 }
 
-.inline-mascot {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-
+/* === Bot Message Bubble === */
 .speech-bubble {
   display: flex;
   align-items: flex-start;
@@ -165,7 +163,8 @@ body {
   border-bottom: 10px solid transparent;
 }
 
-.welcome-message {
+/* === Welcome Card === */
+.welcome-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,21 +173,37 @@ body {
   padding: 1rem;
   text-align: center;
   color: #065f46;
+  animation: fadeInUp 0.6s ease;
 }
 
-.welcome-image {
-  width: 100px;
+.welcome-img {
+  width: 180px;
   height: auto;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .welcome-text {
-  margin: 0;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.welcome-bubble {
-  margin-top: 1rem;
-  align-self: center;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Inline Mascot for smaller bot bubbles === */
+.inline-mascot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
 }
