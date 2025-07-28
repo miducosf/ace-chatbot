@@ -7,30 +7,33 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header with mascot and title -->
-  <header>
-    <div class="ace-mascot">
-      <img src="assets/ace-mascot.png" alt="ACE Mascot" />
-    </div>
-    <h1>ACE</h1>
-    <p>Assistant for Compliance Excellence</p>
-  </header>
+  <main class="chat-card">
+    <!-- Header with mascot and title -->
+    <header class="chat-header">
+      <div class="mascot-info">
+        <img src="assets/ace-mascot.png" alt="ACE Mascot" class="mascot-img" />
+        <div>
+          <h1 class="chat-title">ACE</h1>
+          <p class="chat-subtitle">Assistant for Compliance Excellence</p>
+        </div>
+      </div>
+    </header>
 
-  <!-- Chat UI Section -->
-  <section class="chat-wrapper">
+    <!-- Chat UI Section -->
     <div class="chatbox" id="chatbox">
       <!-- Messages will appear here -->
     </div>
-    <form id="chat-form">
+
+    <form id="chat-form" class="chat-form">
       <input
         type="text"
         id="user-input"
-        placeholder="Ask me anything about Compliance Reviews..."
+        placeholder="Send a message..."
         autocomplete="off"
       />
-      <button type="submit">Send</button>
+      <button type="submit" class="send-btn">➤</button>
     </form>
-  </section>
+  </main>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
