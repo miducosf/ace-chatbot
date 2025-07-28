@@ -13,7 +13,7 @@ chatForm.addEventListener("submit", async (e) => {
   addMessage("bot", "Typing...");
 
   try {
-    const response = await fetch("https://ace-backend-lp1u.onrender.com/api/chat", {
+    const response = await fetch("https://ace-backend-lp1u.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
