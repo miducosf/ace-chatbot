@@ -1,40 +1,5 @@
 const chatForm = document.getElementById("chat-form");
 const userInput = document.getElementById("user-input");
-const chatWindow = document.getElementById("chat-window");
-
-chatForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const userText = userInput.value.trim();
-  if (!userText) return;
-
-  appendMessage("user", userText);
-  userInput.value = "";
-  respondToUser(userText);
-});
-
-function appendMessage(sender, text) {
-  const messageDiv = document.createElement("div");
-  messageDiv.className = "message " + sender;
-  messageDiv.textContent = text;
-  chatWindow.appendChild(messageDiv);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-}
-
-function respondToUser(text) {
-  setTimeout(() => {
-    let response = "I'm ACE! Let me help with that.";
-    if (text.toLowerCase().includes("reviewer")) {
-      response = "You can find the reviewer using the Reviewer Reference List.";
-    } else if (text.toLowerCase().includes("submit")) {
-      response = "Remember to review the checklist before submitting your request.";
-    }
-    appendMessage("bot", response);
-  }, 600);
-}
-
-// DOM elements
-const chatForm = document.getElementById("chat-form");
-const userInput = document.getElementById("user-input");
 const chatBox = document.getElementById("chatbox");
 
 // Replace with your actual OpenAI API key
@@ -45,7 +10,6 @@ chatForm.addEventListener("submit", async (e) => {
   const message = userInput.value.trim();
   if (!message) return;
 
-    // ✅ Add this line here:
   console.log("Submitted message:", message);
 
   // Show user message
@@ -68,16 +32,14 @@ chatForm.addEventListener("submit", async (e) => {
       }),
     });
 
-    const raw = await response.text();
-    console.log("RAW:", raw);
-    const data = JSON.parse(raw);
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || "Something went wrong.";
-    
+
     // Remove "Typing..." placeholder
     chatBox.removeChild(chatBox.lastChild);
     addMessage("bot", reply);
   } catch (error) {
+    console.error("Error:", error);
     chatBox.removeChild(chatBox.lastChild);
     addMessage("bot", "Oops! Something went wrong.");
   }
