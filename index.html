@@ -8,6 +8,7 @@
 </head>
 <body>
   <main class="chat-card">
+    
     <!-- Header with mascot and title -->
     <header class="chat-header">
       <div class="mascot-info">
@@ -19,19 +20,24 @@
       </div>
     </header>
 
-    <!-- Chat UI Section -->
+    <!-- Scrollable Chat Messages Area -->
     <div class="chatbox" id="chatbox">
-<div class="welcome-container">
-  <div class="welcome-box">
-    <img src="assets/ace-mascot.jpg" alt="ACE mascot" class="welcome-large-img" />
-    <p class="welcome-text">
-          Hi, I’m ACE, your Assistant for Compliance Excellence! You can ask me questions like:<br>
-          <em>"Who is the Compliance reviewer for Operations?"</em>
-        </p>
+
+      <!-- Welcome Message -->
+      <div class="welcome-container">
+        <div class="welcome-box">
+          <img src="assets/ace-mascot.jpg" alt="ACE mascot" class="welcome-large-img" />
+          <p class="welcome-text">
+            Hi, I’m ACE, your Assistant for Compliance Excellence! You can ask me questions like:<br>
+            <em>"Who is the Compliance reviewer for Operations?"</em>
+          </p>
+        </div>
       </div>
+
+      <!-- Messages will be dynamically added here -->
     </div>
 
-    <!-- Chat input -->
+    <!-- Chat Input Form -->
     <form id="chat-form" class="chat-form">
       <input
         type="text"
