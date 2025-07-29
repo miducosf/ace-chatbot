@@ -171,13 +171,13 @@ body {
   background: #f0fdf4;
   border-radius: 1rem;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
   color: #065f46;
   animation: fadeInUp 0.6s ease;
 }
 
 .welcome-img {
-  width: 100px;
+  width: 120px;
   max-width: 90%;
   height: auto;
   margin-bottom: 1rem;
