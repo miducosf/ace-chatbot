@@ -181,7 +181,7 @@ body {
   width: 180px;
   max-width: 90%;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .welcome-text {
@@ -193,7 +193,7 @@ body {
 .welcome-container {
   display: flex;
   justify-content: center;
-  margin-top: 0.25rem;
+  margin-top: 0rem;
 }
 
 .welcome-box {
