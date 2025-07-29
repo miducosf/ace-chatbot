@@ -193,13 +193,13 @@ body {
 .welcome-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
 }
 
 .welcome-box {
   background: white;
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 95%;
   max-width: 380px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
