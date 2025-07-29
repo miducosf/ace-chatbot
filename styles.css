@@ -1,3 +1,4 @@
+
 /* === Base Layout === */
 body {
   font-family: Arial, sans-serif;
@@ -82,8 +83,8 @@ body {
 
 .message.bot {
   align-self: flex-start;
-  background-color: #f0fdf4;
-  color: #065f46;
+  background-color: #e6f7ff;
+  color: #0369a1;
 }
 
 /* === Chat Form === */
@@ -135,8 +136,8 @@ body {
 }
 
 .bubble-content {
-  background-color: #f0fdf4;
-  color: #065f46;
+  background-color: #e6f7ff;
+  color: #0369a1;
   padding: 0.75rem 1rem;
   border-radius: 1rem;
   border-top-left-radius: 0.25rem;
@@ -159,7 +160,7 @@ body {
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
-  border-right: 10px solid #f0fdf4;
+  border-right: 10px solid #e6f7ff;
   border-bottom: 10px solid transparent;
 }
 
@@ -189,6 +190,7 @@ body {
   margin: 0;
 }
 
+/* === Animation === */
 @keyframes fadeInUp {
   from {
     opacity: 0;
