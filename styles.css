@@ -179,6 +179,7 @@ details.guidance {
   overflow: hidden;
 }
 
+/* Summary styling */
 details.guidance > summary {
   list-style: none;
   cursor: pointer;
@@ -193,18 +194,28 @@ details.guidance > summary {
   border-bottom: 1px solid #dbeafe;
 }
 
-details.guidance > summary::after {
-  content: "â–¸";
-  transition: transform 0.2s ease;
-  font-size: 1rem;
-  line-height: 1;
-  color: #0369a1;
+/* Remove default disclosure marker */
+.chatbot-guidance summary::-webkit-details-marker {
+  display: none;
 }
 
-details[open].guidance > summary::after {
-  transform: rotate(90deg);
+/* Custom arrow */
+.chatbot-guidance .arrow {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg); /* arrow pointing right */
+  transition: transform 0.3s ease;
 }
 
+/* Rotate arrow when open */
+.chatbot-guidance details[open] .arrow {
+  transform: rotate(-135deg); /* arrow pointing down */
+}
+
+/* Inner panel */
 .guidance-panel {
   padding: 1rem 1.1rem 1.1rem;
   background: #f8fafc;
@@ -219,42 +230,13 @@ details[open].guidance > summary::after {
   font-size: 1rem;
 }
 
+/* Reduced bullet indent */
 .guidance-panel ul {
-  margin: 0 0 0.75rem 0.5rem;
+  margin: 0 0 0.75rem 0;
+  padding-left: 1rem; /* tighter left space */
   list-style: disc;
 }
 
 .guidance-panel p {
   margin: 0 0 0.75rem 0;
-}
-
-/* Remove default arrow from summary */
-.chatbot-guidance summary {
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.chatbot-guidance summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Custom arrow */
-.chatbot-guidance .arrow {
-  display: inline-block;
-  width: 0.6rem;
-  height: 0.6rem;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  transition: transform 0.3s ease;
-}
-
-/* Rotate arrow when open */
-.chatbot-guidance details[open] .arrow {
-  transform: rotate(-135deg);
 }
