@@ -220,10 +220,41 @@ details[open].guidance > summary::after {
 }
 
 .guidance-panel ul {
-  margin: 0 0 0.75rem 1rem;
+  margin: 0 0 0.75rem 0.5rem;
   list-style: disc;
 }
 
 .guidance-panel p {
   margin: 0 0 0.75rem 0;
+}
+
+/* Remove default arrow from summary */
+.chatbot-guidance summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.chatbot-guidance summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow */
+.chatbot-guidance .arrow {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+.chatbot-guidance details[open] .arrow {
+  transform: rotate(-135deg);
 }
