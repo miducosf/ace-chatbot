@@ -10,8 +10,11 @@ body {
   background: #f0f2f5;
   color: #333;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
 }
 
 /* === Card Container === */
@@ -125,78 +128,7 @@ body {
   background: #0284c7;
 }
 
-/* === Bot Message Bubble === */
-.speech-bubble {
-  display: flex;
-  align-items: flex-start;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.message.bot.speech-bubble {
-  padding: 1rem;
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.bubble-content {
-  background-color: #e6f7ff;
-  color: #0369a1;
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
-  border-top-left-radius: 0.25rem;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  max-width: 75%;
-  position: relative;
-}
-
-.bubble-content p {
-  font-size: 1.05rem;
-  margin: 0;
-}
-
-.bubble-content::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: -10px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-right: 10px solid #e6f7ff;
-  border-bottom: 10px solid transparent;
-}
-
 /* === Welcome Card === */
-.welcome-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #e6f7ff;
-  border-radius: 1rem;
-  padding: 1rem;
-  text-align: left;
-  color: #0369a1;
-  animation: fadeInUp 0.6s ease;
-}
-
-.welcome-img {
-  width: 240px;
-  max-width: 90%;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-.welcome-text {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-  color: #0369a1;
-}
-
 .welcome-container {
   display: flex;
   justify-content: center;
@@ -224,57 +156,74 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* === Animation === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.welcome-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #0369a1;
 }
 
-/* === Inline Mascot for Bot Speech Bubbles === */
-.inline-mascot {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-
-/* === Chatbot Guidance Section === */
+/* === Guidance Section === */
 .chatbot-guidance {
   width: 100%;
   max-width: 420px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
-.guidance-box {
-  background: #e6f7ff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  color: #0369a1;
+details.guidance {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+details.guidance > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #e6f7ff;
+  color: #0369a1;
+  font-weight: 600;
+  border-bottom: 1px solid #dbeafe;
+}
+
+details.guidance > summary::after {
+  content: "â–¸";
+  transition: transform 0.2s ease;
+  font-size: 1rem;
+  line-height: 1;
+  color: #0369a1;
+}
+
+details[open].guidance > summary::after {
+  transform: rotate(90deg);
+}
+
+.guidance-panel {
+  padding: 1rem 1.1rem 1.1rem;
+  background: #f8fafc;
+  color: #0f172a;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-.guidance-box h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #0f172a;
+.guidance-panel h4 {
+  margin: 0.75rem 0 0.35rem;
+  color: #0369a1;
+  font-size: 1rem;
 }
 
-.guidance-box ul {
-  list-style: disc inside;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
+.guidance-panel ul {
+  margin: 0 0 0.75rem 1rem;
+  list-style: disc;
 }
 
-.guidance-box p {
-  margin-bottom: 1rem;
+.guidance-panel p {
+  margin: 0 0 0.75rem 0;
 }
