@@ -34,7 +34,7 @@ body {
 
 /* === Header Section === */
 .chat-header {
-  background-color: #2C3E50;
+  background-color: #385286;
   color: white;
   padding: 1rem;
 }
@@ -114,7 +114,7 @@ body {
 }
 
 .send-btn {
-  background: #2C3E50;
+  background: #385286;
   color: white;
   padding: 0 1.2rem;
   font-size: 1.2rem;
@@ -189,7 +189,7 @@ details.guidance > summary {
   justify-content: space-between;
   gap: 0.75rem;
   background: #e6f7ff;
-  color: #2C3E50;
+  color: #385286;
   font-weight: 600;
   border-bottom: 1px solid #dbeafe;
 }
@@ -226,7 +226,7 @@ details.guidance > summary {
 
 .guidance-panel h4 {
   margin: 0.75rem 0 0.35rem;
-  color: #2C3E50;
+  color: #385286;
   font-size: 1rem;
 }
 
